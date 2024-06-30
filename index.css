@@ -1,0 +1,33 @@
+
+#app{
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > button {
+    width: max(20vw, 200px);
+}
+
+table {
+    border: 1px solid black;
+}
+
+tr {
+    border: 1px dotted black;
+}
+
+th, td {
+    text-align: center;
+    max-width: 15vw;
+}
