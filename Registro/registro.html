@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAC Biblioteca</title>
+</head>
+<body>
+    <div id="app">
+        <form @submit.prevent="registro()" id="form">
+            <h2>{{ titulo }}</h2>
+            <input type="email" placeholder="Correo" v-model="form.email" required> 
+            <input type="password" placeholder="Contraseña" v-model="form.password" required>
+            <input type="submit" v-if="type==0" id="btn" value="Iniciar Sesion">
+            <input type="submit" v-if="type==1" id="btn" value="Registrarse">
+            <a href="javascript:void(0)" @click="type=1" v-if="type!=1">Registrarse</a>
+            <a href="javascript:void(0)" @click="type=0" v-if="type!=0">Iniciar Sesión</a>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/Registro/registro.js"></script>
+</body>
+</html>
