@@ -25,23 +25,10 @@
     
         <main class="container-fluid p-5">
             <a class="btn bg-primary text-white p-3"> Donate your book! </a>
-            <table class="container mt-3">
-                <thead>
-                    <tr class="bg-dark text-white">
-                        <th> Nombre </th>
-                        <th> Autor </th>
-                        <th> Género </th>
-                        <th> Stock </th>
-                        <th> Prestados </th>
-                        <th v-if="userIsAdmin"> Acciones </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <row v-for="b in books" book-data="b"></row>
-                </tbody>
+            
 
-                
-            </table>
+            <book-table :book-data="books" :user-is-admin="userIsAdmin"></book-table>
+            
         </main>
 
     </div>
