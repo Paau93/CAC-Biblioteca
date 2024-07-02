@@ -1,11 +1,15 @@
 
 #app{
     height: 100vh;
+    display: grid;
+    grid-template-rows: 64px auto;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 main {
@@ -13,6 +17,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: flex-start;
 }
 
 main > button {
