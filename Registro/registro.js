@@ -1,5 +1,7 @@
-const { createApp } = Vue
+const { createApp } = Vue;
+
 createApp({
+    
     data() {
         return {
             type: 0, //login=0 - registro=1
