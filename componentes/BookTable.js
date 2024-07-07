@@ -37,8 +37,12 @@ export const BookTable = {
         },
         deleteBook(id){
             // Hace un fetch DELETE para eliminar un libro.
-            alert("Delete" + " " + id)
-            fetch("", ["DELETE"])
+            fetch("https://cacbooks.pythonanywhere.com/libros/" + id.toString(), {method: "DELETE"})
+            .then(response => {return response.json()})
+            .then(data => {
+                alert("id " + id.toString() + " borrado correctamente.")
+                console.log(data)
+            })
         }
     }
 };

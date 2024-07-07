@@ -21,5 +21,14 @@ createApp({
             .then(data => {
                 this.books = data;
             })
+        
+        if ("isAdmin" in localStorage) {
+            if (localStorage.getItem("isAdmin") == "0"){
+                this.userIsAdmin = false
+            } else {
+                this.userIsAdmin = true
+            }
+            
+        }
     }
 }).mount("#app")
