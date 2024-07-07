@@ -16,11 +16,11 @@ export const BookTable = {
                 <tbody class="bg-light">
 
                     <tr v-for="book in bookData" v-bind:id="book.id">
-                        <td> {{book.name}} </td>
-                        <td> {{book.author}} </td>
-                        <td> {{book.genre}} </td>
+                        <td> {{book.nombre}} </td>
+                        <td> {{book.autor}} </td>
+                        <td> {{book.genero}} </td>
                         <td> {{book.stock}} </td>
-                        <td> {{book.lend}} </td>
+                        <td> {{book.prestados}} </td>
                         <td v-if="userIsAdmin">
                             <a href="#" v-on:click="editBook(book.id)" class="bg-success btn"><img src="/assets/icons/lapiz.png" alt="edit"></a>
                             <a href="#" v-on:click="deleteBook(book.id)" class="bg-danger btn"><img src="/assets/icons/x.png" alt="edit"></a>
@@ -38,6 +38,7 @@ export const BookTable = {
         deleteBook(id){
             // Hace un fetch DELETE para eliminar un libro.
             alert("Delete" + " " + id)
+            fetch("", ["DELETE"])
         }
     }
 };

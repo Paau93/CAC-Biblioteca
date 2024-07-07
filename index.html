@@ -16,11 +16,13 @@
         <navegacion></navegacion>
     
         <main class="container-fluid p-5">
-            <a href="/books/add.html" class="btn bg-primary text-white p-3"> Agregar un libro </a>
+            <a href="/books/add.html" class="btn bg-primary text-white p-3" v-if="userIsAdmin"> Agregar un libro </a>
             
-
-            <book-table :book-data="books" :user-is-admin="userIsAdmin"></book-table>
+            <book-table v-if="userIsAdmin" :book-data="books" :user-is-admin="userIsAdmin"></book-table>
             
+            <div id="tarjetas" v-if="!userIsAdmin">
+                <h1>Usuario no es admin</h1>
+            </div>
         </main>
 
     </div>
