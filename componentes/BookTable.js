@@ -33,7 +33,7 @@ export const BookTable = {
     methods: {
         editBook(id){
             // Abre la página con la info de un libro. Para poder modificar sus atributos.
-            alert("edit" + " " + id)
+            window.location = "/books/edit.html?id=" + id.toString()
         },
         deleteBook(id){
             // Hace un fetch DELETE para eliminar un libro.
@@ -41,7 +41,7 @@ export const BookTable = {
             .then(response => {return response.json()})
             .then(data => {
                 alert("id " + id.toString() + " borrado correctamente.")
-                console.log(data)
+                location = "/index.html"
             })
         }
     }
