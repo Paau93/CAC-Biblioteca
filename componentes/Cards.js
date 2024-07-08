@@ -12,6 +12,7 @@ export const Cards = {
                   <li class="list-group-item"><strong>Autor:</strong> {{ book.autor }}</li>
                   <li class="list-group-item"><strong>Género:</strong> {{ book.genero }}</li>
                   <li class="list-group-item"><strong>Stock:</strong> {{ book.stock }}</li>
+                  <li class="list-group-item"><strong>Prestados:</strong> {{ book.prestados }}</li>
                 </ul>
               </div>
             </div>
