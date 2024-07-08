@@ -1,5 +1,6 @@
 import { BookTable } from "./componentes/BookTable.js"
 import { Navegacion } from "./componentes/Navegacion.js";
+import { Cards } from "./componentes/Cards.js";
 
 const {createApp} = Vue;
 
@@ -7,7 +8,8 @@ const {createApp} = Vue;
 createApp({
     components: {
         "book-table": BookTable,
-        "navegacion": Navegacion
+        "navegacion": Navegacion,
+        "tarjetas": Cards
     },
     data(){
         return {

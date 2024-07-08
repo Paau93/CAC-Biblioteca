@@ -1,5 +1,4 @@
-
-#app{
+#app {
     height: 100vh;
     display: grid;
     grid-template-rows: 64px auto;
@@ -12,6 +11,10 @@ nav {
     align-content: center;
 }
 
+body {
+    background-color: rgb(106, 116, 128);
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -20,7 +23,7 @@ main {
     align-self: flex-start;
 }
 
-main > button {
+main>button {
     width: max(20vw, 200px);
 }
 
@@ -32,7 +35,41 @@ tr {
     border: 1px dotted black;
 }
 
-th, td {
+th,
+td {
     text-align: center;
     max-width: 15vw;
+}
+
+/*Estilo de las tarjetas*/
+.card {
+    width: auto;
+    height: auto;
+    border: 2px solid #252323;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.card-img-top {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.list-group-item {
+    font-size: 14px;
+    border: none;
+    text-align: left;
+    padding: 2px;
 }

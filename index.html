@@ -20,9 +20,7 @@
             
             <book-table v-if="userIsAdmin" :book-data="books" :user-is-admin="userIsAdmin"></book-table>
             
-            <div id="tarjetas" v-if="!userIsAdmin">
-                <h1>Usuario no es admin</h1>
-            </div>
+            <tarjetas v-if="!userIsAdmin" :books="books"></tarjetas>
         </main>
 
     </div>
